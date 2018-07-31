@@ -3,7 +3,7 @@
 # Goal
 Experince with the SDK to try out different thing can build in here
 
-
+# Keep in m
 
 # Basic Command
 
@@ -16,7 +16,7 @@ Experince with the SDK to try out different thing can build in here
 `dcl deploy`
 
 # Idea behind the DCL
-
+ - entity(Everything is entity)
  - React like (but do not have react)
  - Docker Build with high speed rendering
  - Rendering is solid
