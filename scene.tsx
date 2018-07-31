@@ -1,5 +1,6 @@
 import * as DCL from 'metaverse-api'
 
+
 // This is an interface, you can use it to enforce the types of your state
 export interface IState {
     isDoorClosed: boolean
@@ -19,21 +20,13 @@ export default class HouseScene extends DCL.ScriptableScene<any, IState> {
     }
 
     async render() {
-        const doorRotation = {
-            x: 0,
-            y: this.state.isDoorClosed ? 0 : 90,
-            z: 0
-        }
+
 
         return (
-            <scene position={{x: 10, y: 0, z: 10}}>
+            <scene >
+                <entity position={{ x: 5, y: 0, z: 15 }} rotation={{ x: 5, y: 0, z: 0 }}>
 
-                <box position={{x: 2, y: 0, z: 2}} color="#ff00aa" scale={2}/>
-                <entity rotation={doorRotation} transition={{rotation: {duration: 1000, timing: 'ease-in'}}}>
-                    <box id="door" scale={{x: 1, y: 2, z: 0.05}} position={{x: 0.5, y: 1, z: 0}} color="#00FF00"/>
                 </entity>
-                <box position={{x: 2, y: 1, z: 0}} scale={{x: 2, y: 2, z: 0.05}} color="#0000FF"/>
-                <box position={{x: -1, y: 1, z: 0}} scale={{x: 2, y: 2, z: 0.05}} color="#0000FF"/>
             </scene>
         )
     }
